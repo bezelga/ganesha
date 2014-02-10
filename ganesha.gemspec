@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["fabianobeselga@gmail.com"]
   spec.summary       = %q{ Remember and share your links with your team on a weekly basis. }
   spec.description   = spec.summary
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/bezelga/ganesha"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
