@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ganesha::UseCases::SaveLink do
   describe '#save' do
-    subject(:save) { described_class.new(url, title).save }
+    subject(:save) { described_class.new({ url: url, title: title }).save }
     let(:url) { 'https://github.com/bezelga/ganesha' }
     let(:title) { 'Ganesha' }
 
