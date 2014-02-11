@@ -6,6 +6,7 @@ module Ganesha
       end
 
       def save
+        return false unless link.valid?
         links_repo.save(link)
       end
 
