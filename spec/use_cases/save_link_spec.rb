@@ -13,6 +13,9 @@ describe Ganesha::UseCases::SaveLink do
       it 'saves the link' do
         expect { save }.to change { links_repo.count }.by(1)
       end
+
+      # TODO: test using timecop or doleroean
+      its(:created_at) { should_not be_nil }
     end
 
     context 'when the url is blank' do
