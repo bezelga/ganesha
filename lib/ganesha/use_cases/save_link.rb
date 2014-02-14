@@ -1,6 +1,8 @@
 module Ganesha
   module UseCases
     class SaveLink
+      attr_reader :args
+
       def initialize(args)
         @args = args
       end
@@ -13,15 +15,7 @@ module Ganesha
       private
 
       def link
-        Entities::Link.new({ url: url, title: title })
-      end
-
-      def url
-        @args.fetch(:url)
-      end
-
-      def title
-        @args.fetch(:title)
+        Entities::Link.new(args)
       end
 
       def links_repo

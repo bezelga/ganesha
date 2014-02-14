@@ -7,7 +7,7 @@ module Ganesha
       def initialize(args)
         @url = args.fetch(:url, '')
         @title = args.fetch(:title, '')
-        @created_at = Time.now # TODO: is this the most appropriated place to do this?
+        @created_at = args.fetch(:created_at) { Time.now }
       end
 
       # TODO: tell which field is not present if invalid
