@@ -18,5 +18,9 @@ module Ganesha
     def links_between(args)
       UseCases::LinksBetween.new(args).links
     end
+
+    def current_links
+      UseCases::CurrentLinks.new.links
+    end
   end
 end
